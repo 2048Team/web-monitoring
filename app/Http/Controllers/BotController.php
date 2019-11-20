@@ -14,12 +14,17 @@ class BotController extends Controller
         return view('bots.list', compact('data'));
     }
 
-    function fetch_data(Request $request)
+    function getBots(Request $request)
     {
         if($request->ajax())
         {
             $data = Bot::paginate(10);
-            return view('bots.pagination_data', compact('data'))->render();
+            return view('bots.table', compact('data'))->render();
         }
+    }
+
+    function show($id){
+            $bot = Bot::Where('id', $id)->firstOrFail();
+            return view('bots.detail', ['bot'=>$bot]);
     }
 }

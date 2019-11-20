@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/transactions/add', 'TransactionController@add');
+
+Route::get('/revenue/getcurrent/{id}','RevenueController@getCurrentTrasaction');

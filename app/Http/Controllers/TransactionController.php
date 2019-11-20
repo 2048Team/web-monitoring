@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\AddTransactionEvent;
 use App\Transaction;
+use App\Bot;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -30,12 +32,18 @@ class TransactionController extends Controller
     function  add(Request $request){
         $allRequest  = $request->all();
         $result = $this->create($allRequest);
-
+        $bot_id = $request->bot_station_id;
+        $money = floatval($request->money);
 
         if( $result) {
 
             $id = Transaction::where('txs', $result->txs)->first()->id;
             // Insert thành công sẽ hiển thị thông báo
+            $bot = Bot::Where('id',$bot_id)->first();
+            $bot->current = $bot->current + $money;
+            $bot->count ++;
+            $bot->save();
+            event(new AddTransactionEvent($id, $bot->count, $bot->current));
             return response()->json([
                 'transaction_id' => $id
             ], 200); // Status code here

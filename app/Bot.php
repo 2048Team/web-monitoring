@@ -10,5 +10,6 @@ class Bot extends Model
     protected $primaryKey = 'id'; // or null
     public $incrementing = false;
     protected $dateFormat = 'd-m-Y';
-    protected $fillable = ['title', 'address','action_day', 'investment','current', 'lat', 'lng','isActive'];
+    public $timestamps = false;
+    protected $fillable = ['title', 'address','action_day', 'investment','current', 'lat', 'lng','isActive', 'count'];
 }

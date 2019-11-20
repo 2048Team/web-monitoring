@@ -16,7 +16,7 @@
             <div class="row" data-plugin="matchHeight" data-by-row="true">
                 <div class="col-12" id="table_data">
                     <!-- Panel Accordion -->
-                @include('bots.pagination_data')
+                @include('bots.table')
 
                 <!-- End Panel Accordion -->
                 </div>
@@ -40,7 +40,7 @@
             function fetch_data(page)
             {
                 $.ajax({
-                    url:"/bots/fetch_data?page="+page,
+                    url:"/bots/getBots?page="+page,
                     success:function(data)
                     {
                         $('#table_data').html(data);

@@ -11,13 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+Route::get('/', 'BotController@index');
 
 
 Route::get('/bots/list', 'BotController@index');
-Route::get('/bots/fetch_data', 'BotController@fetch_data');
+Route::get('/bots/getBots', 'BotController@getBots');
+Route::get('/bots/get/{id}', 'BotController@show');
 
 Route::get('/bots/map', 'BotController@map');
 
@@ -30,9 +29,7 @@ Route::post('/transactions/searchresult', 'TransactionController@search');
 //    return view('bots.list');
 //});
 
-Route::get('/bots/map', function () {
-    return view('bots.map');
-});
+Route::get('/revenue/{id}', 'RevenueController@index');
 
 Route::get('/transactions/search', function () {
     return view('transactions.search');

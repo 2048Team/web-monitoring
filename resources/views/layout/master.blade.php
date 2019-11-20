@@ -8,7 +8,7 @@
     <meta name="description" content="bootstrap admin template">
     <meta name="author" content="">
 
-    <title>BOT Station | Supervision System</title>
+    <title>BOT Station | Monitoring</title>
 
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
     <link rel="shortcut icon" href="/assets/images/favicon.ico">
@@ -72,7 +72,7 @@
         </button>
         <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
 {{--            <img class="navbar-brand-logo" src="/assets/images/logo.png" title="Remark">--}}
-            <span class="navbar-brand-text hidden-xs-down">B.S.S.S</span>
+            <span class="navbar-brand-text hidden-xs-down">BETC System</span>
         </div>
         <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
                 data-toggle="collapse">
@@ -99,6 +99,9 @@
                         <span class="sr-only">Toggle fullscreen</span>
                     </a>
                 </li>
+                <li class="nav-item hidden-sm-down">
+                    <span class="nav-link">BOT Station Monitoring</span>
+                </li>
 
 
             </ul>
@@ -116,41 +119,35 @@
         <div>
             <div>
                 <ul class="site-menu" data-plugin="menu">
-                    <li class="site-menu-category">General</li>
-                    <li class="site-menu-item  active">
-                        <a href="/">
-                            <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
-                            <span class="site-menu-title">Dashboard</span>
-                        </a>
-                    </li>
+{{--                    <li class="site-menu-category">General</li>--}}
+{{--                    <li class="site-menu-item  active">--}}
+{{--                        <a href="/">--}}
+{{--                            <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>--}}
+{{--                            <span class="site-menu-title">Dashboard</span>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
                     <li class="site-menu-category">BOTS</li>
                     <li class="site-menu-item ">
                         <a href="/bots/list">
                             <i class="site-menu-icon  wb-list-numbered" aria-hidden="true"></i>
-                            <span class="site-menu-title">List</span>
-                        </a>
-                    </li>
-                    <li class="site-menu-item ">
-                        <a href="/bots/map">
-                            <i class="site-menu-icon wb-map" aria-hidden="true"></i>
-                            <span class="site-menu-title">Maps</span>
+                            <span class="site-menu-title">All</span>
                         </a>
                     </li>
 
 
-                    <li class="site-menu-category">REVENUE</li>
-                    <li class="site-menu-item">
-                        <a href="/revenue">
-                            <i class="site-menu-icon wb-eye" aria-hidden="true"></i>
-                            <span class="site-menu-title ">Overview</span>
-                        </a>
-                    </li>
-                    <li class="site-menu-item">
-                        <a href="javascript:void(0)">
-                            <i class="site-menu-icon fas fa-info" aria-hidden="true"></i>
-                            <span class="site-menu-title ">Detail</span>
-                        </a>
-                    </li>
+{{--                    <li class="site-menu-category">REVENUE</li>--}}
+{{--                    <li class="site-menu-item">--}}
+{{--                        <a href="/revenue">--}}
+{{--                            <i class="site-menu-icon wb-eye" aria-hidden="true"></i>--}}
+{{--                            <span class="site-menu-title ">Overview</span>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="site-menu-item">--}}
+{{--                        <a href="javascript:void(0)">--}}
+{{--                            <i class="site-menu-icon fas fa-info" aria-hidden="true"></i>--}}
+{{--                            <span class="site-menu-title ">Detail</span>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
                     <li class="site-menu-category">TRANSACTION LOGS</li>
 
                     <li class="site-menu-item">

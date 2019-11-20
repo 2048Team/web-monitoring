@@ -43,7 +43,7 @@
                                 </tr>
                                 <tr>
                                     <td>Bot station title</td>
-                                    <td>{{$transaction->bot->title}} <a target="_blank" href="/bot/detail/{{$transaction->bot->id}}">Detail</a></td>
+                                    <td>{{$transaction->bot->title}} <a target="_blank" href="/bots/get/{{$transaction->bot->id}}">Detail</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bot station address</td>
